@@ -60,10 +60,13 @@ target_include_directories(${PROJECT_NAME} PUBLIC
         ${PYTHON_INCLUDE_DIRS}
         )
 
+LINK_DIRECTORIES(/usr/local/lib/)
+
 target_link_libraries(${PROJECT_NAME}
         ${Boost_LIBRARIES}
         ${OpenCV_LIBRARIES}
         ${PYTHON_LIBRARIES}
+        opencv_imgproc
         )
 
 #---------------------------   INSTALLATION    -----------------------------------------------------
